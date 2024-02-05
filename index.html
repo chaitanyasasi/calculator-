@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>caclulator</title>
+    <link rel="stylesheet" href="/calc.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <section class="container mainsection">
+
+        <div class="calculator">
+            <form>
+                <div class="screenbar">
+                    <div>
+                        <input type="text" name="screen" id="resultbox">
+                    </div>
+                    <div>
+                        <input type="text" name="secondscreen" id="final">
+                    </div>
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick="exhaust()" class="operator">
+                    <input type="button" value="DEL" onclick="screen.value=screen.value.toString().slice(0,-1)"
+                        class="operator">
+                    <input type="button" value="." onclick="screen.value +='.'" class="operator">
+                    <input type="button" value="/" onclick="screen.value +='/'" class="operator">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="screen.value +='7'">
+                    <input type="button" value="8" onclick="screen.value +='8'">
+                    <input type="button" value="9" onclick="screen.value +='9'">
+                    <input type="button" value="*" onclick="screen.value +='*'" class="operator">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="screen.value +='4'">
+                    <input type="button" value="5" onclick="screen.value +='5'">
+                    <input type="button" value="6" onclick="screen.value +='6'">
+                    <input type="button" value="-" onclick="screen.value +='-'" class="operator">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="screen.value +='1'">
+                    <input type="button" value="2" onclick="screen.value +='2'">
+                    <input type="button" value="3" onclick="screen.value +='3'">
+                    <input type="button" value="+" onclick="screen.value +='+'" class="operator">
+                </div>
+                <div>
+                    <input type="button" value="00" onclick="screen.value +='00'">
+                    <input type="button" value="0" onclick="screen.value +='0'">
+                    <input type="button" value="=" onclick="output()" class="operator equal" id="result">
+
+                </div>
+            </form>
+
+    </section>
+
+    <script src="/calc.js"></script>
+</body>
+
+
+</html>
